@@ -1,6 +1,6 @@
-window.addEventListener('DOMContentLoaded', function() {
+window.addEventListener('DOMContentLoaded', function() { //загрузка DOM дерева
 
-        'use strict';
+        'use strict'; //перевод в строгий режим
         let tab = document.querySelectorAll('.info-header-tab'),
             info = document.querySelector('.info-header'),
             tabContent = document.querySelectorAll('.info-tabcontent');
