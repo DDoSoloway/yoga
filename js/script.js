@@ -37,7 +37,7 @@ window.addEventListener('DOMContentLoaded', function() { //загрузка DOM 
 
         let deadline = '2019-12-22';
 
-        function getTimeRemaining(endtime){
+        function getTimeRemaining(endtime){ //функция для рассчёта часов, минут и секунд до дедлайна от текущей даты
             let t = Date.parse(endtime) - Date.parse(new Date()),
                 seconds = Math.floor((t/1000) % 60),
                 minutes = Math.floor((t/1000/60) % 60),
@@ -51,7 +51,7 @@ window.addEventListener('DOMContentLoaded', function() { //загрузка DOM 
                 };
         }
 
-        function setClock(id, endtime){
+        function setClock(id, endtime){ //функция для задания отсчета на странице
             let timer = document.getElementById(id),
                 hours = timer.querySelector('.hours'),
                 minutes = timer.querySelector('.minutes'),
@@ -59,7 +59,7 @@ window.addEventListener('DOMContentLoaded', function() { //загрузка DOM 
                 timeInterval = setInterval(updateClock, 1000);
 
 
-            function updateClock() {
+            function updateClock() { //функция для обновления времени на странице
                 let t = getTimeRemaining(endtime);
 
                 function addZero(num){
